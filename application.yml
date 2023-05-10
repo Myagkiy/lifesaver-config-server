@@ -8,3 +8,9 @@ eureka:
     hostname: host.docker.internal
     preferIpAddress: true
     statusPageUrl: http://${eureka.instance.hostname}:${server.port}/status
+spring:
+  cloud:
+    loadbalancer:
+      health-check:
+        interval: 10s
+        refetch-instances-interval: 10s
